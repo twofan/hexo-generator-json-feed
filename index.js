@@ -15,6 +15,8 @@ function hexo_generator_json_feed(site) {
       return {
         title: post.title,
         link: post.permalink,
+	      thumbnail: post.thumbnail,
+	      cover: post.cover,
 				description: post.excerpt ? minify(post.excerpt) : minify(post.content),
 				pubDate: post.date.toDate().toUTCString(),
 				guid: post.permalink,
